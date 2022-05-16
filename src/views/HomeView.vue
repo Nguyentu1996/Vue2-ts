@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="flex h-full flex-col w-full p-4">
+    <BreabCrumd />
+    <Header />
+    <BoardFilter />
+    <BoardKanBan />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Header from '../components/Header.vue'
+import BoardFilter from '../components/BoardFilter.vue'
+import BoardKanBan from '../components/BoardKanban.vue'
+import BreabCrumd from '../components/Breadcrumd.vue'
 
-@Component({
+
+export default {
   components: {
-    HelloWorld,
-  },
-})
-export default class HomeView extends Vue {}
+    Header,
+    BoardFilter,
+    BoardKanBan,
+    BreabCrumd,
+  }
+}
 </script>
+
+<style lang="scss" scoped>
+</style>
